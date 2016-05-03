@@ -10,23 +10,25 @@
   <header>
     <div class="navbar">
       <div class="col-xs-3 link1">
-        <%= link_to "Contribute", "#" %>
+        <%= link_to "Contribute", new_quote_path, class: 'navlink' %>
       </div>
       <div class="col-xs-2">
-        <div class="circle">
-          <br />
-          What should
-          <br />
-          I practice
-          <br />
-          today?
-        </div>
+        <%= link_to root_path, class: 'logo' do %>
+          <div class="circle">
+            <br />
+            What should
+            <br />
+            I practice
+            <br />
+            today?
+          </div>
+        <% end %>
       </div>
       <div class="col-xs-4 slogan">
         A drummer's Motivation!
       </div>
       <div class="col-xs-3 link2">
-        <p class="pull-right"><%= link_to "About", "#" %></p>
+        <%= link_to "About", "#", class: 'pull-right navlink' %>
       </div>
     </div>
   </header>
@@ -38,11 +40,11 @@
 <div class="footer">
   <div class="container">
     <div class="col-xs-6">
-      <%= link_to "I want to practice something else!", "#" %>
+      <%= link_to "I want to practice something else!", root_path, class: 'footerlink' %>
     </div>
     <div class="col-xs-6">
-      Check out <a href="https://www.facebook.com/SouthJerseyDrumAcademy/">South Jersey Drum Academy</a><br />
-      Want to build your own Splurty Web App? - <a href="http://thefirehoseproject.com">Learn how to code here</a>
+      Check out <a href="https://www.facebook.com/SouthJerseyDrumAcademy/" class="footerlink">South Jersey Drum Academy</a><br />
+      Want to build your own Splurty Web App? - <a href="http://thefirehoseproject.com" class="footerlink">Learn how to code here</a>
     </div>
   </div>
 </div>
