@@ -25,13 +25,27 @@
       <div class="col-xs-4 slogan">
         A drummer's Motivation!
       </div>
-      <div class="col-xs-3 link2 pull-right">
-        <%= link_to "About", "#" %>
+      <div class="col-xs-3 link2">
+        <p class="pull-right"><%= link_to "About", "#" %></p>
       </div>
     </div>
   </header>
 
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
+  
+<div class="footer">
+  <div class="container">
+    <div class="col-xs-6">
+      <%= link_to "I want to practice something else!", "#" %>
+    </div>
+    <div class="col-xs-6">
+      Check out <a href="https://www.facebook.com/SouthJerseyDrumAcademy/">South Jersey Drum Academy</a><br />
+      Want to build your own Splurty Web App? - <a href="http://thefirehoseproject.com">Learn how to code here</a>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
