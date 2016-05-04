@@ -103,3 +103,22 @@ body {
 	color: #808299;
 }
 
+.aboutbox {
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	font-family: 'Courier New', Courier;
+}
+
+.aboutbox a {
+  color: white;
+	font-family: 'Amatic SC', cursive;
+  font-size: 17px;
+	font-weight: 250;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.aboutlink:hover {
+	text-decoration:none;
+	color: #808299;	
+}
+
