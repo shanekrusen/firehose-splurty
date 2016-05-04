@@ -10,7 +10,7 @@
   <header>
     <div class="navbar">
       <div class="col-xs-3 link1">
-        <%= link_to "Contribute", new_quote_path, class: 'navlink' %>
+        <%= link_to "Contribute", '#', data: {toggle: 'modal', target: '#myModal'}, class: 'navlink' %>
       </div>
       <div class="col-xs-2">
         <%= link_to root_path, class: 'logo' do %>
@@ -32,6 +32,28 @@
       </div>
     </div>
   </header>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Submit Your Quote</h4>
+        </div>
+        <%= simple_form_for Quote.new do |f| %>
+          <div class="modal-body">
+            <%= f.input :saying %>
+            <%= f.input :author %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= f.submit 'Add Quote', class: 'btn btn-default' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
 <div class="container">
   <% if flash[:error].present? %>
